@@ -15,19 +15,17 @@ export class CanonicalService {
 
   ngOnInit(): void {
     this.updateCanonicalUrl(this.router.url);
-    console.log(this.router.url);
   }
 
   updateCanonicalUrl(urn: string) {
-    const head: HTMLHeadElement = this.dom.getElementsByTagName('head')[0];
-
-    let link: HTMLLinkElement | null = this.dom.querySelector(
-      `link[rel='canonical']`
-    );
+    let link = this.dom.querySelector("[rel='canonical']") as HTMLLinkElement;
 
     if (link == null) {
-      link = this.dom.createElement('link') as HTMLLinkElement;
-      head.appendChild(link);
+      <HTMLHeadElement>(
+        this.dom
+          .getElementsByTagName('head')[0]
+          .appendChild(<HTMLLinkElement>this.dom.createElement('link'))
+      );
     }
 
     link.setAttribute('rel', 'canonical');

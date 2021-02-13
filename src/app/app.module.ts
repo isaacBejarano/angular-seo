@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { ViewsModule } from './views/views.module';
 
 import { CanonicalService } from './services/canonical.service';
+import { TitleAndMetaService } from './services/title-and-meta.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, ViewsModule],
-  providers: [Meta, Title, CanonicalService],
+  providers: [Meta, Title, CanonicalService, TitleAndMetaService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
