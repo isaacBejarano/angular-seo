@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
 
         // FIXME: switch
         aR.data.subscribe((data) => {
-          console.log(data);
 
           /* TITLE */
           this.title.setTitle(data.title);

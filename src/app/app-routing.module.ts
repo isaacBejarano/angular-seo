@@ -53,12 +53,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-// addMeta() {
-//   this.meta.addTag({ name: 'description', content: 'Description' });
-//   this.meta.addTag({ name: 'robots', content: 'index, follow' });
-//   this.meta.addTag({
-//     property: 'og:title',
-//     content: ' Content Title for social media',
-//   });
-// }
