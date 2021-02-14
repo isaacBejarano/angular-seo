@@ -8,6 +8,8 @@ import { CanonicalService } from 'src/app/services/canonical.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
+  imgAbout = './assets/img/about.jpg';
+
   constructor(private canonical: CanonicalService) {}
 
   ngOnInit(): void {
